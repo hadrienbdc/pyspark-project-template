@@ -3,14 +3,14 @@
 Boilerplate template for machine learning projects in PySpark.
 
 To build docker image :
-```bash
+```sh
 IMAGE_NAME=simple-ml-project
 IMAGE_VERSION=1.0.0
 docker build -t ${IMAGE_NAME}:${IMAGE_VERSION} -f Dockerfile .
 ```
 
 To run model fit :
-```bash
+```sh
 IMAGE_NAME=simple-ml-project
 IMAGE_VERSION=1.0.0
 PYTHON_SCRIPT=pyspark_project/fit_pipeline.py
@@ -32,7 +32,7 @@ optional arguments:
 ```
  
 To run prediction
-```bash
+```sh
 IMAGE_NAME=simple-ml-project
 IMAGE_VERSION=1.0.0
 PYTHON_SCRIPT=pyspark_project/predict.py
@@ -54,6 +54,6 @@ optional arguments:
 ```
 
 To run tests
-```
+```sh
 docker run -d --name IMAGE_NAME ${IMAGE_NAME}:${IMAGE_VERSION} python setup.py test
 ```
